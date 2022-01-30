@@ -1,10 +1,10 @@
 # ImageCaptionGeneratorDeployment
 Files used for the deployment of an image caption generator for CS554/master's essay.
 
-To use the model, follow these instructions.
+To use the model, follow these instructions. 
 Clone the repository and nagivate to the directory it was installed to.
 Run the command "pip install -r requirments.txt" to install all the necessary dependencies.
-Next unzip the checkpoints.zip file.
+Next unzip the checkpoints.7z file using 7zip.
 Then run the command "python caption_app <image_url>", where <image_url> is the actual
 url of the image you want the model to generate a caption for. 
 The model should then process the image and output a caption for it. Keep in mind that
@@ -21,9 +21,11 @@ Here I will give a brief rundown of what each file does.
 caption_app.py contains the actual code for out model, while the other three files are
 just helpers to assist the functions of caption_app.
 
-checkpoints.zip contain the tensorflow checkpoints of the most recent version of our
+checkpoints.7z contains the tensorflow checkpoints of the most recent version of our
 model. caption_app uses these checkpoints to load the state of our model, so it does
-not have to trained again each time we want to use it.
+not have be to retrained again each time we want to use it. Checkpoint files are quite
+large, so to upload them to git I was only able to include the most recent checkpoint
+(which is the only one needed by caption_app).
 
 requirments.txt contains the list of all python libraries needed to run caption_app.
 
